@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+		ITCom.
+	</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="ITCOM.css">
+  </head>
+  <body>
+    
+	<div style="text-align: center;">
+		<img class="flashing-image" src="logo.png" height="370px" width="370px" >
+	</div>
+    
+	<form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdcV01gxrzBmBwuvzLgrEA9YdEip9KbVo7VJSIlA7YbVFhxwg/formResponse"  method="POST" onsubmit=" return validateForm()" >
+	<div>
+		<div class="card" id="card1">   
+			<p style="font-size: large; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"> 
+				This form was prepared to collect a lot of data,
+				but it is good to know the reasons why we need that data :
+			</p>
+			
+			<h3>Professional Email:</h3>
+			<p>
+				Email is a common way of communication, especially with potential clients.
+				Having a professional email address is important as it creates trust and 
+				credibility right from the beginning.
+			</p>
+			
+			<h3>linkedin:</h3>
+			<p>
+				LinkedIn is a great platform to enhance your career opportunities. Building
+				a strong network of connections increases your chances of getting your dream 
+				job.
+			</p>
+			
+			<h3>Cognitive domain:</h3>
+			<p>
+				In the field of information technology, having knowledge is crucial. It helps 
+				us offer relevant courses and categorize members by their field for collaborative
+				projects.
+			</p>
+			
+			<h3>CV:</h3>
+			<p>
+				A CV is useful for obtaining letters of recommendation. When students ask teachers,
+				counselors, or previous employers for a reference, a resume helps them remember your
+				achievements and qualifications for a specific position.
+			</p>
+			
+			
+			<div class="button-container1">
+				<button type="button" id="nextBtn" onclick="nextCard()" style=" float:right; padding-bottom:10px;">Next</button>
+			</div>
+		</div>
+		
+		<div class="card hidden" id="card2">   
+			<!-- required -->
+			<label for="name"><b>Name:</b></label>
+			<div class="tooltip">
+				<input class="input-field" id="myInput" type="text" placeholder="Name" name="entry.1729277573" required >
+				<span class="tooltiptext">Please write your full name</span>
+			  </div>
+
+			<label for="phone"><b>Phone: (optional)</b></label>
+			<div class="tooltip">
+				<input type="number" placeholder="07########" id="phone" name="entry.290749432" >
+				<span class="tooltiptext" width="500px">Please provide your phone number to enhance communication speed</span>
+			  </div>
+		
+			<!-- add roul to the phone input -->
+			<label for="email"><b>Professional Email:</b></label>
+			<div class="tooltip">
+				<input type="email" placeholder="Name@gmail.com" id="myInput2" name="entry.933242152" required>
+				<span class="tooltiptext">For effective communication and timely notifications, it is recommended to use a professional email</span>
+			  </div>
+		
+			<label for="Linkedin"><b>Linkedin:</b></label>
+			<div class="tooltip">
+				<input type="url" placeholder="Link " id="myInput3" name="entry.620230018" required>
+				<span class="tooltiptext">Please fill the the link of your LinkedIn </span>
+			</div>
+			<div class="button-container1">
+				<a id="myLink" href="https://drive.google.com/uc?export=download&id=1C00jXSnNBxNnSI-osheKrgT8U2byF2g2" target="_blank" >
+					Advice about Linkedin Profile (1)
+				</a>
+				<br>
+				<a id="myLink" href="https://drive.google.com/uc?export=download&id=19ntQA9cgXeRl4W3WD8aw4Gd82IhC1cqk" download="https://drive.google.com/uc?export=download&id=19ntQA9cgXeRl4W3WD8aw4Gd82IhC1cqk">
+					Advice about Linkedin Profile (2)
+				</a>
+			
+				<br><br>
+				
+				<button type="button" id="prevBtn" onclick="previousCard()">Back</button>
+
+				
+					<button type="button" id="nextBtn" onclick="nextCard()" style="float: right;">Next</button><br>
+
+				
+			</div>
+		</div>
+		
+		
+		<div class="card hidden" id="card3">
+			
+			<label for="Cognitive Domain"><b>Cognitive Domain:</b></label>
+
+			<div class="tooltip">
+				<textarea style="width: 100%;" id="myInput4" name="entry.241998499" placeholder="Back-End , Security , Gaming etc .." required></textarea>
+				<span class="tooltiptext">Having a strong understanding of your field of knowledge is crucial for effectively planning future projects</span>
+			  </div>
+
+			
+			
+
+
+			<label for="CV"><b>CV:</b></label>
+			<div class="tooltip">
+				<input type="text" placeholder="Google Drive link" id="myInput5" name="entry.653951337" required>
+				<span class="tooltiptext">Don't forget to make the drive link public</span>
+				<!-- here put the  -->
+				<br>
+				
+						<br>
+                        <a id="myLink" href="https://docs.google.com/document/d/1s6ZYhQE5-4KITj2S6G20wW0FkpPQd4GhUVygT0Hc2Qs/edit?usp=sharing">Templates for CV</a>
+                        <br>
+                        <a id="myLink" href="https://create.microsoft.com/en-us/templates/resumes-and-cover-letters
+                        https://www.my-resume-templates.com///
+                        https://www.coolfreecv.com/">Templates for CV</a>
+			  </div>
+			  <br>
+			  <br>
+
+			  
+
+			<div class="button-container1">
+
+				<button type="button" id="prevBtn" onclick="previousCard()">Back</button>
+				<button type="button" id="nextBtn" onclick="nextCard()" style="float: right;">Next</button>
+			</div>
+			
+			</div>
+
+		</div>
+		
+		<div class="card hidden" id="card4">
+			<div>
+				<p><b> W­­­­­­­­hat programming languages are you proficient in ?</b></p>
+				
+				<div class="tooltip">
+					<label for="vehicle1" style="display: inline-block;">
+						<input type="checkbox" id="vehicle1"  value="C++" name="entry.1561368547" >
+							C++
+						</label>
+				  </div>
+
+				<br>
+				
+				<div class="tooltip">
+					<label for="vehicle2" style="display: inline-block;">
+						<input type="checkbox" id="vehicle2" value="Java" name="entry.1561368547">
+							Java
+						</label>
+				</div>
+				<br>
+				
+				<div class="tooltip">
+					<label for="vehicle3" style="display: inline-block;">
+						<input type="checkbox" id="vehicle3" value="PHP" name="entry.1561368547">
+							PHP 
+					</label>
+				</div>
+				<br>
+
+				<div class="tooltip">
+					<label for="vehicle3" style="display: inline-block;">
+						<input type="checkbox" id="vehicle3"  value="Python" name="entry.1561368547">
+							Python 
+					</label>
+				</div>
+				<br>
+
+				<div class="tooltip">
+					<label for="vehicle3" style="display: inline-block;">
+						<input type="checkbox" id="vehicle3"  value="JavaScript" name="entry.1561368547">
+							JavaScript 
+					</label>
+				</div>
+				<br>
+			</div>
+			
+			<div>
+				<p><b>Have you worked on any software development projects?
+					<i>If yes</i>, could you describe one of your projects in some detail?</b></p>
+				<div class="tooltip">
+					<label>
+						<input type="radio" id="html" value="NO" name="entry.1587580442">
+							NO
+						</label>
+				</div>
+
+				<br>
+				<label>
+				<input type="radio" id="css" value="Yes" name="entry.1587580442">
+					Yes
+				</label>
+
+				<label>
+					<textarea placeholder="If yes, could you describe one of your projects in some detail?" name="entry.1587580442"></textarea><br>
+				
+					<label><b>
+						What is your experience with web development? 
+						Which front-end and back-end technologies have you used ? </b></label>
+				<textarea id="question" name="entry.800612061" placeholder="Basic Details"></textarea>
+
+			</div>
+	
+			<div>
+				<p><b>Did you Know about the  RESTful APIs?</b></p>
+				<div class="tooltip">
+					<label>
+						<input type="radio" id="html"  value="NO" name="entry.2079762789">
+							NO
+						</label>
+				</div>
+
+				<br>
+				<label>
+				<input type="radio" id="css"  value="Yes"  name="entry.2079762789">
+					Yes
+				</label>
+
+				<p><b>Did you know about the security practices or familiar with common security vulnerabilities and mitigation techniques? </b></p>
+				<div class="tooltip">
+					<label>
+						<input type="radio" id="html"  value="NO" name="entry.1227426523">
+							NO
+						</label>
+				</div>
+
+				<br>
+				<label>
+				<input type="radio" id="css"  value="Yes"  name="entry.1227426523">
+					Yes
+				</label>
+				<textarea id="question"  name="entry.1227426523" placeholder="What you know about security practice in software programe?" ></textarea>
+
+				<!-- submitBtn -------------------------- -->
+			<div class="button-container1">
+				<button type="button" id="prevBtn" onclick="previousCard()">Back</button>
+
+				<div class="popup" >
+				<button type="submit" id="submitBtn" style="float:center;" onclick=" return validateForm()">Submit</button>
+
+					<span class="popuptext" id="myPopup">Please Fill the Null input</span>
+				</div>
+			</div>
+			</div>
+			</div>
+
+			</div>
+		
+		
+			</div>
+        </form>
+		<script src="ITCOM.js"></script>
+	</body>
+  </html>
+
+  <!-- 
+1-https://drive.google.com/uc?export=download&id=1C00jXSnNBxNnSI-osheKrgT8U2byF2g2
+2-https://drive.google.com/uc?export=download&id=19ntQA9cgXeRl4W3WD8aw4Gd82IhC1cqk
+3-CV-EXample-DOCX :https://docs.google.com/document/d/1s6ZYhQE5-4KITj2S6G20wW0FkpPQd4GhUVygT0Hc2Qs/edit?usp=sharing
+
+
+4- Templates docx: 
+ https://create.microsoft.com/en-us/templates/resumes-and-cover-letters
+ https://www.my-resume-templates.com///
+ https://www.coolfreecv.com/
+
+
+   -->
