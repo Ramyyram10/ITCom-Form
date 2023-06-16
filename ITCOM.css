@@ -1,0 +1,308 @@
+/* Define the animation */
+@keyframes flash {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  /* Apply the animation to the image */
+  .flashing-image {
+    animation: flash 8s linear infinite;
+  }
+
+
+
+  .flashing-image {
+      max-width: 100%;
+      height: auto;
+    }
+   
+        /* Rest of your CSS styles */
+
+        @keyframes text-animation {
+          0% {
+            opacity: 0;
+            transform: scale(1.2);
+          }
+          50% {
+            opacity: 1;
+            transform: scale(1);
+          }
+          100% {
+            opacity: 0;
+            transform: scale(1.2);
+          }
+        }
+
+
+      .card {
+          border-radius: 5px;
+          padding: 25px;
+          padding-bottom:25px;
+          padding-top: 45px;
+      }
+
+      .hidden {
+          display: none;
+      }
+      body {
+      background-color: #f2f2f2;
+      font-family: Arial, sans-serif;
+    }
+  h1 {
+      text-align: center;
+      margin-top: 50px;
+      margin-bottom: 50px;
+      color: #333;
+    }
+    form {
+      background-color: #fff;
+      width: 600px;
+      margin: 0 auto;
+      padding: 50px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      animation: form-fade-in 1s;
+    }
+    @keyframes form-fade-in {
+      0% {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    label {
+      display: block;
+      margin-bottom: 10px;
+      color: #333;
+    }
+    input[type="text"],
+    input[type="number"],
+    input[type="email"],
+    input[type="url"] {
+      display: block;
+      width:250%;
+      padding: 10px;
+      border: solid 1px black;
+      border-radius: 5px;
+      margin-bottom: 20px;
+      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+    input[type="text"]:hover,
+    input[type="number"]:hover,
+    input[type="email"]:hover,
+    input[type="url"]:hover {
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      transform: translateY(-5px);
+    }
+    input[type="text"]:focus,
+    input[type="number"]:focus,
+    input[type="email"]:focus,
+    input[type="url"]:focus {
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+    textarea{
+      display: block;
+      width: 100%;
+      padding: 10px;
+      border: solid 1px black;
+      border-radius: 5px;
+      margin-bottom: 20px;
+      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+    textarea:hover {
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      transform: translateY(-5px);
+    }
+    textarea:focus{
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+    button[type="submit"] {
+display: block;
+margin: 50px   auto; /* Center the button horizontally */
+padding: auto;
+background-color: #333;
+color: #fff;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+transition: background-color 0.2s;
+}
+
+    button[type="submit"]:hover {
+      background-color: #555;
+    }
+      /* Mobile styles */
+      @media only screen and (max-width: 600px) {
+          form {
+              padding: 30px;
+          }
+          input[type="text"],
+          input[type="url"],
+          input[type="email"],
+          input[type="number"] {
+              font-size: 16px;
+          }
+      }
+      }
+
+  /* ...existing styles... */
+
+  .button-container1 {
+      position: absolute;
+      bottom: 20px;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      padding: 0 20px;
+  }
+
+  .button-container1 button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+  }
+
+  .button-container1 button:hover {
+      background-color: #333;
+  }
+
+  .button-container1 button#nextBtn {
+      margin-left: auto;
+  }
+  
+  .button-container1 button#submitBtn {
+      margin-left: auto;
+  }
+  /* Tooltip container */
+  .tooltip {
+    position: relative;
+    display: inline-block;
+  }
+
+  /* Tooltip text */
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 300px;
+    background-color: #424549;
+    color: #ffffff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 70%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    
+  }
+
+  /* Show the tooltip text when hovering over the tooltip container */
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 5;
+  }
+  /* Link styles for unvisited state */
+  #myLink {
+      color: blue;
+      text-decoration: none;
+  }
+
+  #myLink:hover {
+      color:rgb(232, 170, 14);
+        text-decoration: none;
+  }
+
+
+   /*cute popup--------------------------------------------------*/
+  /* Popup container - can be anything you want */
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* The actual popup */
+.popup .popuptext {
+  visibility: hidden;
+  width: 160px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 80%;
+  left: 50%;
+  margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;} 
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+
+#myLink {
+  color: blue;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.8s;
+}
+
+#myLink:hover {
+  color: red;
+  text-decoration: none;
+}
+
+#myLink:visited {
+  color: blue;
+}
+
+#myLink:focus {
+  outline: 2px solid rgb(0, 94, 255);
+}
+
+#myLink:active {
+  color: orange;
+}
