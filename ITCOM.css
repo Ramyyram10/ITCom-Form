@@ -84,7 +84,7 @@
     input[type="email"],
     input[type="url"] {
       display: block;
-      width:250%;
+      width:200%;
       padding: 10px;
       border: solid 1px black;
       border-radius: 5px;
