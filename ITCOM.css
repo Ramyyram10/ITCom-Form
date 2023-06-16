@@ -1,14 +1,8 @@
 /* Define the animation */
 @keyframes flash {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
 }
 
 /* Apply the animation to the image */
@@ -22,14 +16,11 @@
 }
 
 /* Rest of your CSS styles */
-
 .card {
   border-radius: 5px;
   padding: 25px;
   padding-bottom: 25px;
   padding-top: 45px;
-  position: relative;
-  text-align: center;
 }
 
 .hidden {
@@ -50,7 +41,7 @@ h1 {
 
 form {
   background-color: #fff;
-  width: 600px;
+  max-width: 600px;
   margin: 0 auto;
   padding: 50px;
   border-radius: 10px;
@@ -126,9 +117,8 @@ textarea:focus {
 
 button[type="submit"] {
   display: block;
-  margin: 0 auto; /* Center the button horizontally */
-  padding: 10px 20px;
-  font-size: 16px;
+  margin: 50px auto; /* Center the button horizontally */
+  padding: auto;
   background-color: #333;
   color: #fff;
   border: none;
@@ -144,24 +134,24 @@ button[type="submit"]:hover {
 /* Mobile styles */
 @media only screen and (max-width: 600px) {
   form {
-    width: 100%;
     padding: 30px;
   }
 
   input[type="text"],
-  input[type="number"],
-  input[type="email"],
   input[type="url"],
-  textarea {
+  input[type="email"],
+  input[type="number"] {
     font-size: 16px;
   }
 }
+
+/* ...existing styles... */
 
 .button-container1 {
   position: absolute;
   bottom: 20px;
   display: flex;
-  justify-content: center; /* Center the buttons horizontally */
+  justify-content: space-between;
   width: 100%;
   padding: 0 20px;
 }
@@ -177,15 +167,15 @@ button[type="submit"]:hover {
 }
 
 .button-container1 button:hover {
-  background-color: #555;
+  background-color: #333;
 }
 
 .button-container1 button#nextBtn {
-  margin-left: 10px;
+  margin-left: auto;
 }
 
 .button-container1 button#submitBtn {
-  margin-left: 10px;
+  margin-left: auto;
 }
 
 /* Tooltip container */
@@ -206,8 +196,8 @@ button[type="submit"]:hover {
   position: absolute;
   z-index: 1;
   bottom: 125%;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 70%;
+  margin-left: -60px;
   opacity: 0;
   transition: opacity 0.3s;
 }
@@ -229,7 +219,7 @@ button[type="submit"]:hover {
   text-decoration: none;
 }
 
-/* Cute popup styles */
+/* Cute popup */
 /* Popup container - can be anything you want */
 .popup {
   position: relative;
@@ -252,11 +242,9 @@ button[type="submit"]:hover {
   padding: 8px 0;
   position: absolute;
   z-index: 1;
-  bottom: 100%;
+  bottom: 80%;
   left: 50%;
-  transform: translateX(-50%);
-  opacity: 0;
-  transition: opacity 0.3s;
+  margin-left: -80px;
 }
 
 /* Popup arrow */
@@ -274,20 +262,10 @@ button[type="submit"]:hover {
 /* Toggle this class - hide and show the popup */
 .popup .show {
   visibility: visible;
-  -webkit-animation: fadeIn 1s;
   animation: fadeIn 1s;
 }
 
 /* Add animation (fade in the popup) */
-@-webkit-keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -319,4 +297,118 @@ button[type="submit"]:hover {
 
 #myLink:active {
   color: orange;
+}
+
+/* New Styles */
+
+/* Logo */
+.logo {
+  max-width: 100%;
+  height: auto;
+  animation: flash 8s linear infinite;
+}
+
+/* Form Container */
+.form-container {
+  display: flex;
+  justify-content: center;
+}
+
+/* Form */
+form {
+  background-color: #fff;
+  width: 600px;
+  margin: 0 auto;
+  padding: 50px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  animation: form-fade-in 1s;
+}
+
+@keyframes form-fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Form Inputs */
+label {
+  display: block;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="url"] {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: solid 1px black;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+input[type="text"]:hover,
+input[type="number"]:hover,
+input[type="email"]:hover,
+input[type="url"]:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+textarea {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: solid 1px black;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+textarea:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+}
+
+textarea:focus {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Form Button Container */
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.button-container button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button-container button:hover {
+  background-color: #555;
 }
